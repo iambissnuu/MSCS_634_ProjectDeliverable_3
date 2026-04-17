@@ -51,17 +51,19 @@ The dataset contains customer demographic, financial, and campaign-related infor
 
 ### Classification Insights
 - The tuned Decision Tree model achieved the highest accuracy (~0.89), demonstrating that hyperparameter tuning significantly improves model performance.
-- KNN showed lower F1 score, indicating difficulty in handling class imbalance and complex relationships in the dataset.
+- Decision Tree performs better because it can capture nonlinear relationships between customer attributes.
+- KNN showed a lower F1 score, indicating difficulty in handling class imbalance and complex decision boundaries.
+- The lower F1 score highlights challenges in correctly identifying customers who subscribe to term deposits (minority class).
 
 ### Clustering Insights
-- K-Means successfully segmented customers into distinct groups based on financial and behavioral characteristics.
-- Some clusters represent high-value customers with higher balances, while others indicate lower engagement groups.
-- These segments can be used for targeted marketing and customer retention strategies.
+- K-Means successfully segmented customers into three distinct groups based on financial and behavioral characteristics.
+- For example, one cluster includes customers with higher balances (~2000+) and engagement, while another represents lower-value customers with less interaction.
+- These segments can be used to design targeted marketing strategies, improve engagement, and enhance customer retention.
 
 ### Association Rule Insights
-- Strong relationships were found between attributes such as job and education.
-- High lift values indicate meaningful patterns that can help identify specific customer groups.
-- These patterns can be used to design personalized marketing campaigns.
+- Strong relationships were identified between customer attributes such as job and education.
+- For example, the rule **(management → tertiary)** shows a high lift (~2.8), indicating a strong and meaningful relationship.
+- These patterns can help identify specific customer groups and support personalized marketing campaigns.
 
 ---
 
@@ -79,9 +81,9 @@ By combining these approaches, the project provides a comprehensive understandin
 ## Challenges Encountered
 
 - Handling categorical variables required one-hot encoding, which increased dataset dimensionality.
-- Selecting optimal model parameters required experimentation and tuning.
-- Clustering required proper feature scaling and interpretation of overlapping groups.
-- Association rule mining required transforming data into transactional format and tuning support/confidence thresholds.
+- Selecting optimal model parameters required experimentation and hyperparameter tuning.
+- Clustering required proper feature scaling and careful interpretation due to overlapping customer characteristics.
+- Association rule mining required transforming data into transactional format and selecting appropriate support and confidence thresholds.
 
 ---
 
@@ -108,4 +110,6 @@ By combining these approaches, the project provides a comprehensive understandin
 
 ## Conclusion
 
-This project demonstrates how multiple data mining techniques can be applied together to extract meaningful insights from real-world data. The combination of classification, clustering, and pattern mining provides a comprehensive analytical framework for understanding customer behavior and improving business decision-making.
+This project demonstrates how multiple data mining techniques can be applied together to extract meaningful insights from real-world data. The combination of classification, clustering, and association rule mining provides a comprehensive analytical framework for understanding customer behavior.
+
+The results highlight how predictive modeling, customer segmentation, and pattern discovery can support targeted marketing, improve decision-making, and enhance overall business strategy.
